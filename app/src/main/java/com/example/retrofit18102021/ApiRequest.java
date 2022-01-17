@@ -1,5 +1,7 @@
 package com.example.retrofit18102021;
 
+import java.util.List;
+
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Path;
@@ -12,7 +14,7 @@ public interface ApiRequest {
 //    @GET("data/2.5/weather")
 //    Call<String> getTempCity(@Query("appid")String appid,@Query("units")String units,@Query("q")String q);
     // DÙng params : để thay đổi giá trị
-    @GET("data/2.5/weather?appid=86183a23377ed034aef7aad102f43d64&units=metric&q={cityName}")
-    Call<String> getTempCity(@Path("cityName") String cityName);
+    @GET("data/2.5/weather?appid=86183a23377ed034aef7aad102f43d64&units=metric")
+    Call<WeatherModel> getTempCity(@Query("q") String cityName);
 
 }

@@ -61,4 +61,15 @@ public class WeatherModel {
         this.cod = cod;
     }
 
+    @Override
+    public String toString() {
+        return "WeatherModel{" +
+                "weather=" + weather +
+                ", main=" + main +
+                ", wind=" + wind +
+                ", sys=" + sys +
+                ", name='" + name + '\'' +
+                ", cod=" + cod +
+                '}';
+    }
 }
